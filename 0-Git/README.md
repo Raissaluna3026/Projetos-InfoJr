@@ -1,7 +1,7 @@
 # Atividade de Núcleo
 
 - **Núcleo:** Web
-- **Orientadores:** Turma 1 [Carlos Cerqueira](https://gitlab.com/Carloscerq) | [Djair Maykon](https://gitlab.com/djairmaykon) | Turma 3 [Victoria Beatriz](https://gitlab.com/VicBia) 
+- **Orientadores:** Turma 1 [Carlos Cerqueira](https://gitlab.com/Carloscerq) | Turma 2 [Djair Maykon](https://gitlab.com/djairmaykon) | Turma 3 [Victoria Beatriz](https://gitlab.com/VicBia) 
 - **Coorientadores gerais:** [João Lofiego](https://gitlab.com/JGabrielzn) | [Letícia Costa](https://gitlab.com/leetecea) | [Tauane Heloise](https://gitlab.com/tauaneheloise) | [Yan Brandão](https://gitlab.com/YanBrandao1)
  
 ## Descrição da atividade
