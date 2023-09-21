@@ -1,0 +1,37 @@
+header{
+    width: 1440px;
+    height: 160px;
+    background-color: rgb(224, 111, 111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welo{
+    margin-right: 30%;
+}
+.but{
+    width: 151px;
+    height: 40px;
+    top: 40px;
+    left: 1274px;
+    border-radius: 15px;
+
+}
+.pp{
+    margin-left: 20%;
+    margin-right: 30px;
+}
+.pp2{
+    margin-right: 30px;
+
+}
+.lov{
+    color: green;
+}
+main{
+    background-color: black;
+    width: 1440px;
+    height: 904px;
+    top: 120px;
+
+}
