@@ -7,6 +7,7 @@
     margin: 0;
 }
 
+/*cabeçalho do projeto*/
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -17,12 +18,16 @@ span{
     background: #ffffff;
     height: 120px;
 }
+.enquad{
+    max-width: 1400px; /*garante q a lista fique na lateral*/
+    margin: 0 15px;
+}
 
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px; /*IMPORTNT*/
+    height: 130px; /*espç do de cima p ul*/
 }
 nav ul{
     display: flex;
@@ -45,7 +50,7 @@ nav > div > h1{
 
 .navitems a{
     list-style: none;
-    margin-right: 100px;
+    margin-right: 50px; /*espaç entre a lista*/
     color: black;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -53,7 +58,7 @@ nav > div > h1{
     font-weight: bolder;
 }
 
-header > nav > ul > a > button{
+header > div > nav > ul > a > button{
     width: 151px;
     height: 30px;
     top: 30px;
@@ -65,6 +70,8 @@ header > nav > ul > a > button{
     font-weight: bold;
 }
 
+
+/*corpo do projeto*/
 main > div > p{
     width: 371px;
     height: 351px;
