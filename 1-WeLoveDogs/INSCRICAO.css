@@ -63,3 +63,22 @@ button{
     color: #1C4701;
     font-weight: bolder;
 }
+
+/*corpo do projeto*/
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+
+
