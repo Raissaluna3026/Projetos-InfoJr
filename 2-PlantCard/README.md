@@ -8,7 +8,7 @@ Com base no design especificado para sua turma programe esse card de artigo sobr
 
 Iremos atualizar os mockups a serem utilizados nessa atividade, os links serão atualizados a medida que as RN's forem acontecendo.
 
-1 - 
+1 -  [mockup²](https://www.figma.com/file/lZPIRYY80V7OeHcsnDJf0x/Atividade-1%3A-Card?type=design&node-id=0%3A1&mode=design&t=WuLOOfy6HIJb2QJL-1)
 
 2 -
 
