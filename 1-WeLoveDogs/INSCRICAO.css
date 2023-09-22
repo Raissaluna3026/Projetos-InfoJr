@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,300&family=Raleway:wght@400;500&display=swap');
+
+
+/*reiniciando*/
+* {
+    margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: 'Open Sans', sans-serif; 
+}
+nav, ul{list-style: none;}
+a {  text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover{opacity: 1;}
+
+
+/*cabeçalho do projeto*/
+header{
+    background-color: #ffffff;
+    width: 100%;
+    /*position: absolute; /*porque ele vai ficar por cima do efeito hero vamos descobrir oq eh*/
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header h1{
+    width: 281px;
+    font-size: 48px;
+    font-weight: 700;
+}
+span{
+    color: #7ED321;
+}
+header nav{
+    display: flex; /* os itens da lista estavam em pe e ficaram deitados*/
+    align-items: center;
+
+}
+header li a{
+    color: #000000;
+    font-weight: bolder;
+}
+header li{
+    margin: 0 15px;
+}
+header li:first-child{
+    margin-left: 0;
+}
+header li:last-child{
+    margin-right: 0;
+}
+
+button{
+    width: 151px;
+    height: 40px;
+    top: 40px;
+    left: 1274px;
+    border-radius: 15px;
+    border: none;
+    background-color: #7ED32166;
+    color: #1C4701;
+    font-weight: bolder;
+}
