@@ -2,110 +2,120 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;1,300&family=Raleway:wght@400;500&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
+
+/*reiniciando*/
+* {
+    margin: 0; padding: 0; font-size: 100%; box-sizing: border-box; font-family: 'Open Sans', sans-serif; 
 }
+nav, ul{list-style: none;}
+a {  text-decoration: none; cursor: pointer; opacity: 0.9;}
+a:hover{opacity: 1;}
+
 
 /*cabeçalho do projeto*/
-body{
-    font-family: 'Open Sans', sans-serif;
+header{
+    background-color: #ffffff;
+    width: 100%;
+    /*position: absolute; /*porque ele vai ficar por cima do efeito hero vamos descobrir oq eh*/
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header h1{
+    width: 281px;
+    font-size: 48px;
+    font-weight: 700;
 }
 span{
     color: #7ED321;
 }
-.nav-cont{
-    background: #ffffff;
-    height: 120px;
+header nav{
+    display: flex; /* os itens da lista estavam em pe e ficaram deitados*/
+    align-items: center;
+
 }
-.enquad{
-    max-width: 1400px; /*garante q a lista fique na lateral*/
+header li a{
+    color: #000000;
+    font-weight: bolder;
+}
+header li{
     margin: 0 15px;
 }
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 130px; /*espç do de cima p ul*/
+header li:first-child{
+    margin-left: 0;
 }
-nav ul{
-    display: flex;
-}
-nav .logo{
-    font-family: 'Open Sans', sans-serif;
-    width: 281px;
-    height: 65px;
-    top: 27px;
-    left: 15px;
-}
-nav > div > h1{
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 65px;
-    letter-spacing: 0em;
-    text-align: left;
+header li:last-child{
+    margin-right: 0;
 }
 
-
-.navitems a{
-    list-style: none;
-    margin-right: 50px; /*espaç entre a lista*/
-    color: black;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    text-decoration: none;
+button{
+    width: 151px;
+    height: 40px;
+    top: 40px;
+    left: 1274px;
+    border-radius: 15px;
+    border: none;
+    background-color: #7ED32166;
+    color: #1C4701;
     font-weight: bolder;
 }
 
-header > div > nav > ul > a > button{
-    width: 151px;
-    height: 30px;
-    top: 30px;
-    left: 1274px;
-    border-radius: 8px;
-    border: none;
-    color: #1C4701;
-    background-color: #7ED32166;
-    font-weight: bold;
-}
+/*responsividade
+
+@media (max-width: 700px) {
+    header{
+        flex-direction: column;
+    }
+
+*/
 
 
 /*corpo do projeto*/
-main > div > p{
+
+/*HERO IMAGEM*/
+
+.maintotal{
+    display: flex;
+    justify-content: space-around;
+}
+.div_prasoutras{
+    justify-content: space-around;
+    display:flex;
+    align-items: center;
+    width: 340px;
+    height: 600px;
+
+
+}
+.divdostextos{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.maintotal h1{
     width: 371px;
-    height: 351px;
+    height: 300px;
     top: -28px;
-    font-family: Open Sans;
     font-size: 48px;
     font-weight: 700;
     line-height: 65px;
     letter-spacing: 0em;
     text-align: left;
-    line-height: 75px;
 }
-
-.cabecont{
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
-    height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-main > div > a > button{
+.maintotal .but{
     width: 220px;
     height: 51px;
+    top: 494px;
+    left: 200px;
     border-radius: 15px;
     background-color: #7ED321;
     color: #1C4701;
-    border: none;
+    padding: 13px 63px;
     font-weight: bolder;
-    font-size: 16px;
+    justify-content: flex-start;
 }
