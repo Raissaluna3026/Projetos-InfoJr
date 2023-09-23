@@ -10,7 +10,7 @@ Iremos atualizar os mockups a serem utilizados nessa atividade, os links serão 
 
 1 -  [mockup²](https://www.figma.com/file/lZPIRYY80V7OeHcsnDJf0x/Atividade-1%3A-Card?type=design&node-id=0%3A1&mode=design&t=WuLOOfy6HIJb2QJL-1)
 
-2 -
+2 -  [mockup²](https://www.figma.com/file/hO2Lh3m12fa0kuSAfWFJ9T/Info-Jr?type=design&node-id=0%3A1&mode=design&t=QcmnAuBw9uwMJfaI-1)
 
 3 -
 
