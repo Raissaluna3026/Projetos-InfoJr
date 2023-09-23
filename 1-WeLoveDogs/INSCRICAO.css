@@ -24,6 +24,9 @@ header{
     align-items: center;
     padding: 20px 50px;
 }
+header > a{
+    color: black;
+}
 
 header h1{
     width: 281px;
@@ -66,7 +69,8 @@ button{
 
 /*corpo do projeto*/
 
-h1{
+.titulo{
+    position: absolute;
     width: 216px;
     height: 65px;
     top: 181px;
@@ -79,109 +83,123 @@ h1{
     text-align: left;
 
 }
-
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.nomelab{
+    position: absolute;
+    width: 124px;
+    height: 50px;
+    top: 283px;
+    left: 159px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
 }
-.sec{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
+.idadelab{
+    position: absolute;
+    width: 124px;
+    height: 50px;
+    top: 346px;
+    left: 160px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
 }
-
-#email{
-    width: 419px;
-    height: 43px;
-    border-radius: 7px;
-    background-color: #ffffff;
-    border-color:#9F9F9F ;
+.emaillab{
+    position: absolute;
+    width: 124px;
+    height: 50px;
+    top: 409px;
+    left: 159px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
 }
-#idade{
-    width: 419px;
-    height: 43px;
-    border-radius: 7px;
-    background-color: #ffffff;
-    border-color:#9F9F9F ;
+.msglab{
+    position: absolute;
+    width: 124px;
+    height: 50px;
+    top: 472px;
+    left: 160px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
 }
 #nome{
+    position: absolute;
     width: 419px;
     height: 43px;
+    top: 283px;
+    left: 297px;
     border-radius: 7px;
-    background-color: #ffffff;
-    border-color:#9F9F9F ;
+    border: 1px solid #9F9F9F;
+
+}
+#idade{
+    position: absolute;
+    width: 418px;
+    height: 43px;
+    top: 346px;
+    left: 298px;
+    border-radius: 7px;
+    border: 1px;
+    border: 1px solid #9F9F9F
+}
+#email{
+    position: absolute;
+    width: 419px;
+    height: 43px;
+    top: 409px;
+    left: 297px;
+    border-radius: 7px;
+    border: 1px;
+    color: linear-gradient(0deg, #9F9F9F, #9F9F9F),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #9F9F9F;
 }
 #msg{
-    width: 419px;
+    position: absolute;
+    width: 418px;
     height: 160px;
+    top: 472px;
+    left: 298px;
     border-radius: 7px;
-    background-color: #ffffff;
-    border-color:#9F9F9F ;
-}
-.nome{
-    padding: 0 30px 0px 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-}
-.idade{
-    padding: 0 33px 0px 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-}
-.email{
-    padding: 0 29px 0px 0;
-    font-family:'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-
-}
-.msg{
-    padding: 0 15px 0px 0;
-    font-family:'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: center;
-    
-}
-
-
-.grupo{
-    padding-bottom: 20px;
-}
-.grupo2{
-    padding-bottom: 20px;
-
-}
-.grupo3{
-    padding-bottom: 20px;
-}
-.grupo4{
-    padding-bottom: 20px;
+    border: 1px;
+    color: linear-gradient(0deg, #9F9F9F, #9F9F9F),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 1px solid #9F9F9F;
 }
 .btn{
+    position: absolute;
     width: 141px;
     height: 42px;
     top: 652px;
     left: 574px;
     border-radius: 10px;
+    background-color: #7ED321;
 
 }
+.divimg{
+    position: absolute;
+    width: 582px;
+    height: 436px;
+    top: 270px;
+    left: 717px;
+}
+/*.img{
+    width: 479.85px;
+    height: 342.22px;
+    top: 46.55px;
+    left: 51.15px;
+    
+}*/

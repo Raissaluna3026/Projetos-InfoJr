@@ -16,13 +16,15 @@ a:hover{opacity: 1;}
 header{
     background-color: #ffffff;
     width: 100%;
-    /*position: absolute; /*porque ele vai ficar por cima do efeito hero vamos descobrir oq eh*/
     top: 0;
     left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
+}
+header > a{
+    color: black;
 }
 
 header h1{

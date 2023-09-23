@@ -24,6 +24,9 @@ header{
     align-items: center;
     padding: 20px 50px;
 }
+header > a{
+    color: black;
+}
 
 header h1{
     width: 281px;
