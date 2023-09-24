@@ -12,7 +12,7 @@ Iremos atualizar os mockups a serem utilizados nessa atividade, os links serão 
 
 2 -  [mockup²](https://www.figma.com/file/hO2Lh3m12fa0kuSAfWFJ9T/Info-Jr?type=design&node-id=0%3A1&mode=design&t=QcmnAuBw9uwMJfaI-1)
 
-3 -
+3 - [mockup²](https://www.figma.com/file/lFJ4SRuOcnCZda1Lf1D8FW/card-atv01?type=design&node-id=0-1&mode=design&t=nDFn1MwdDW6tYSGe-0)
 
 ### Requisitos Obrigatórios:
 
