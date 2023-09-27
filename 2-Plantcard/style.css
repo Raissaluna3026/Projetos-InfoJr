@@ -1,8 +1,14 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,500;1,300&family=Raleway:wght@400;500&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
+    
 }
 
+/*DESKTOP*/
 body{
     /*width: 1440px;
     height: 1024px;
@@ -23,8 +29,8 @@ body{
     border-radius: 20px 0px;
 }
 .imglado{
-    width: 200px; /*n mexi*/
-    height: 352px; /*altura menos 10*/
+    width: 210px; /*n mexi*/
+    height: 362px; /*altura menos 10*/
     margin-right: -36px;
     border-radius: 20px 0px 0px 20px;
     border: 5px solid #FFFDFD;
@@ -32,8 +38,8 @@ body{
 }
 .cardinfo{ /*CONSERTAR ALTURA*/
     display: flex;
-    width: 559px;
-    height: 298px;
+    width: 528px;
+    height: 308px;
     padding: 32px;
     flex-direction: column;
     justify-content: space-between;
@@ -52,24 +58,26 @@ body{
 }
 h1{
     color: #132305;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    line-height: 39px;
 }
 p{
     align-self: stretch;
     color: #132305;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 16px; /*ou 18 ou usa text-align*/
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 24px;
 }
 .autor{
     display: flex;
     width: 185px;
+    height: 48px;
     align-items: center;
     gap: 12px;
 }
@@ -93,7 +101,7 @@ p{
     height: 24px;
     flex-shrink: 0;
     color: #132305;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -101,23 +109,22 @@ p{
 }
 .data{
     color: #132305;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 24px */
 }
-.C5{
+.C5{ /*tem algo de errado aqui q eu n sei o que é*/
     display: flex;
     width: 179px;
     height: 92px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    position: absolute;
     margin: 238px 32px 32px 412px;
-    background-color: red;
-}
+    position: absolute;
+}   
 .C2{
     display: flex;
     width: 25px;
@@ -138,3 +145,5 @@ p{
     height: 24px;
     padding: 1px, 4px, 1px, 4px;
 }
+
+/*MOBILE*/
