@@ -5,22 +5,16 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Inter', sans-serif;
 }
 
 /*DESKTOP*/
 body{
-    /*width: 1440px;
-    height: 1024px;
-    top: 212px;
-    left: -857px;
-    padding: 331px, 278px, 331px, 375px;
-    background-color: aquamarine; */
     display: inline-flex;
     padding: 331px 278px 331px 375px;
     justify-content: flex-end;
     align-items: center;
-    background-color: black;
+    background-color: #1A1B19;;
 }
 .card{ 
     display: flex;
@@ -74,76 +68,48 @@ p{
     font-weight: 400;
     line-height: 24px;
 }
-.autor{
+.ftebtn{
     display: flex;
-    width: 185px;
-    height: 48px;
     align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    width: 528px;
 }
-.img{
+.teste{
+    display: flex;
+    gap: 10px;
+
+}
+.btnn{
+    display: flex;
     width: 48px;
     height: 48px;
-    flex-shrink: 0;
-    border-radius: 60px;
-    border: 2px solid #132305;
-    background: url(<path-to-image>), lightgray 0px -0.075px / 100% 150.06% no-repeat;
-}
-.frame8{
-    display: flex;
-    height: 48px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.pedro{
-    width: 52px;
-    height: 24px;
-    flex-shrink: 0;
-    color: #132305;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 150%; /* 27px */
-}
-.data{
-    color: #132305;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-}
-.C5{ /*tem algo de errado aqui q eu n sei o que é*/
-    display: flex;
-    width: 179px;
-    height: 92px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 238px 32px 32px 412px;
-    position: absolute;
-}   
-.C2{
-    display: flex;
-    width: 25px;
-    height: 25px;
     padding: 10px;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     gap: 10px;
     flex-shrink: 0;
     border-radius: 60px;
     background: #CCDBCB;
+    cursor: pointer;
 }
-
-.imgioshare{
-    top: 1px;
-    left: 4px;
-    width: 24px;
-    height: 24px;
-    padding: 1px, 4px, 1px, 4px;
+.share{
+    display: flex;
+    padding: 8px 12px;
+    gap: 12px;    
+    align-self: stretch;
+    border-radius: 100px;
+    background: #CCDBCB;
+    font-family: 'Inter', sans-serif;
+    color: #103410;
+    visibility: hidden;
+}
+.semnome{
+    display: flex;
+    margin-bottom: 50px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /*MOBILE*/
+
