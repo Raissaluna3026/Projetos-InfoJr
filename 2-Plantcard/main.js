@@ -1,5 +1,5 @@
-let button = document.querySelector('div div div .btnn');
-let criacao = document.querySelector('div div div .share');
+let button = document.querySelector('section div footer div .btn');
+let criacao = document.querySelector('section div footer div .share');
 function abrirmodal(){
     if (criacao.style.visibility === 'hidden') {
         criacao.style.visibility = 'visible';
@@ -11,4 +11,3 @@ function abrirmodal(){
 
 
 
-/* para ocular o que vai aparecer, e o que vai aparecer? a outra div com várias paradas*/
