@@ -14,34 +14,41 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #1A1B19;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
 }
 .sec{ 
     display: flex;
-    align-items: flex-start;
-    gap: -4.74vh;
+    align-items: center;
+    /*gap: -4.74vh;*/
     border-radius: 20px 0px;
+    width: 100%;
 }
 .imglado{
-    width: 32vh;
+    width: 20vw;
     height: 50vh;
-    margin-right: -3.16vh;
+    margin-right: -36px;
     border-radius: 20px 0px 0px 20px;
     border: 0.75vh solid #FFFDFD;
     object-fit: cover;
 }
+
 .tituloEautor{ 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: flex-start;
     border-radius: 20px;
     background: #fffdfd; 
-    margin-left: -4.74vh;
-    width: 80vh;
-    height: 51.51vh;
-    padding-left: 2.37vh;
+    width: 70%;
+    height: 351px;
+    padding-left: 15px;
 }
 .texto{
     display: flex;
@@ -50,6 +57,7 @@ body{
     gap: 2.35vh;
     color: #132305;
     padding: 1.97vh;
+    height: 60%;
 }
 h1{
     color: #132305;
@@ -64,15 +72,14 @@ p{
     font-size: 2.20vh; /*ou 18 ou usa text-align*/
     font-style: normal;
     font-weight: 400;
-    line-height: 3.16vh;
+    line-height: 23px;
 }
 .rodape{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 73.78vh;
-    padding-left: 1.31vh;
-
+    width: 100%;
+   
 }
 .perfilautor{
     display: flex;
@@ -99,6 +106,7 @@ p{
     flex-direction: column;
     align-items: flex-end;
     gap: 1.58vh;
+    margin-right: 20px;
 }
 .btn{
     display: flex;
@@ -130,13 +138,20 @@ p{
 
 /*MOBILE*/
 
-@media (max-width: 650px) {
+@media (max-width: 400px) {
     body{
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+
     }
     .sec{
         display: flex;
@@ -157,7 +172,7 @@ p{
         flex-direction: column;
         align-items: flex-start;
         width: 55.50vh;
-        margin-left: 2.88vh;
+        margin-left: 25px;
         margin-top: -3.2vh;
         height: 66vh;
     }
