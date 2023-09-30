@@ -47,8 +47,9 @@ main{
     border-radius: 20px;
     background: #fffdfd; 
     width: 70%;
-    height: 351px;
+    height: 51.51vh;
     padding-left: 15px;
+    margin-top: -0.70vh; /**/
 }
 .texto{
     display: flex;
@@ -138,43 +139,42 @@ p{
 
 /*MOBILE*/
 
-@media (max-width: 400px) {
+@media (max-width: 410px) {
     body{
         height: 100vh;
         width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 20px;
     }
-    main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
 
-    }
     .sec{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         border-radius: 20px;
+        width: 100%;
+        height: 100%;
     }
+    
     .imglado{
         width: 56.16vh;
         height: 26.35vh;
         border: 5px solid #FFFDFD;
         object-fit: cover;
         border-radius: 20px 20px 0px 0px;
+        margin-left: -2.1vh;
     }
     .tituloEautor{ 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: 55.50vh;
-        margin-left: 25px;
+        margin-left: 23px;
         margin-top: -3.2vh;
-        height: 66vh;
+        height: 63vh;
     }
     .texto{
         display: flex;
