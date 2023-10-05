@@ -23,13 +23,13 @@ export default function Calculadora(){
     }
     function calcule(){
         if (operador==="/"){
-            setNum(antigonum/num)
+            setNum(parseFloat(antigonum)/parseFloat(num))
         }else if(operador==="X"){
             setNum(parseFloat(antigonum)*parseFloat(num))
         }else if(operador==="+"){
             setNum(parseFloat(antigonum)+parseFloat(num))
         }else if(operador==="-"){
-            setNum(antigonum-num)
+            setNum(parseFloat(antigonum)-parseFloat(num))
         }
     }
     function operadores(e){
