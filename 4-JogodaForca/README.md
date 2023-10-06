@@ -23,7 +23,7 @@ Com base no design indicado no link abaixo desenvolvam um jogo da forca que aten
 
 ### Design
 
-O link do design a ser seguido nesta atividade: 
+O link do design a ser seguido nesta atividade  (se desejarem): 
 - https://www.figma.com/file/ek5uhIz2fkVmicl3Nj5gSR/Alura-Challenge---Desafio-2---L%C3%B3gica?type=design&node-id=10-158&mode=design&t=gucUR3xO8ANwaHP7-0
 
 
