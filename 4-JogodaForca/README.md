@@ -65,3 +65,5 @@ O link do design a ser seguido nesta atividade:
 - https://blog.geekhunter.com.br/introducao-a-typescript/
 - https://www.devmedia.com.br/introducao-ao-typescript/36729
 - https://dev.to/cleiver/iniciando-um-novo-projeto-react-e-typescript-3cip
+- **https://www.youtube.com/watch?v=-ONUyenGnWw**
+- **https://www.youtube.com/watch?v=ewppbL5Iz54**
