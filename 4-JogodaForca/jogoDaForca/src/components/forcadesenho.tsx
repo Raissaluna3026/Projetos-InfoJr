@@ -84,16 +84,20 @@ top: 159px;
 rotate: 30deg;
 `
 
+const bodyParts = [Cabeca, Corpo, BracoDireito, BracoEsquerdo, PernaDireita, PernaEsquerda]
 
-export default function ForcaDesenho() {
+interface ForcaDesenhoProps{
+    numeroPalpites : number
+}
+
+
+
+export default function ForcaDesenho({numeroPalpites}:ForcaDesenhoProps ) {
     return(
         <div style={{position: 'relative'}}>
-            <PernaEsquerda/>
-            <PernaDireita/>
-            <BracoEsquerdo/> 
-            <BracoDireito/>
-            <Corpo/>
-            <Cabeca/>
+            {bodyParts.slice(0, numeroPalpites).map((BodyParty, index) => {
+                return <BodyParty key={index}/>
+            })}
             <Pendurar/>
             <LinhaHorizontal/>
             <Haste/>
