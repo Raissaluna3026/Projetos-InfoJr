@@ -56,12 +56,23 @@ const Button = styled.button<{isActive: boolean}>`
  }
 `
 
-export default function Teclado() {
+interface KeyBoardProps {
+    disabled?:boolean
+    activeLetra: string[]
+    inactiveLetra: string[]
+    addLetrasAcertadas: (letra:string) => void
+}
+
+export default function Teclado({disabled=false, activeLetra,inactiveLetra,addLetrasAcertadas}: KeyBoardProps) {
     return(
         <Pacote>
-            {teclas.map((letra)=> (
-                <Button isActive={true} key={letra} >{letra.toUpperCase()}</Button>
-            ))}
+            {teclas.map((letra)=> {
+                const isActive = !activeLetra.includes(letra)
+                const isInactive = !inactiveLetra.includes(letra)
+                return (
+                    <Button onClick={() => addLetrasAcertadas(letra)} isActive={isActive && isInactive} key={letra} disabled={!(isActive && isInactive) || disabled}>{letra.toUpperCase()}</Button>
+                )
+            })}
         </Pacote>
     )
 }
