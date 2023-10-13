@@ -10,6 +10,7 @@ font-weight: bold;
 text-transform: uppercase;
 font-family: monospace;
 justify-content:center;
+width: 100%;
 `
 
 interface ForcaLetrasProps{

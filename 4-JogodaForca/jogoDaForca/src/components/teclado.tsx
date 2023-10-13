@@ -32,7 +32,13 @@ const Pacote = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
 gap: 0.5rem;
-width: 600px;
+width: 150%;
+
+@media (max-width: 500px) {
+    width: 70%;
+    display:none;
+  }
+
 `
 
 const Button = styled.button<{isActive: boolean}>`

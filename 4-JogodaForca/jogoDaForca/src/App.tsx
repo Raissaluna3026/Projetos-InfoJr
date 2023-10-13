@@ -11,6 +11,14 @@ display: flex;
 flex-direction: column;
 gap: 2rem;
 align-items: center;
+width: 100%;
+
+@media (max-width: 500px) {
+  width: 70%;
+  margin-left:55px;
+}
+
+
 `
 
 const PartesBoneco = styled.div`
@@ -20,9 +28,12 @@ flex-direction: column;
 gap: 0.8rem;
 width: 350px;
 font-size: 13px;
+
+@media (max-width: 500px) {
+  width: 80%;
+}
 `
 const Placar = styled.div`
-  position: fixed;
   top: 20px; 
   right: 20px;
   background-color: #D2691E;
@@ -30,16 +41,26 @@ const Placar = styled.div`
   padding: 10px;
   margin-bottom: 20px;
   margin-right: 50px;
-  width: 200px;
+  width: 100%;
   border-radius: 10px;
   color: white;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-left:55px;
+  }
 `
 const BotaoReiniciar = styled.button` 
   background-color:#D2691E; 
   color: white; 
   padding: 12px;
-  margin-top: 20px;
+  margin-top: 2px;
   font-size: 18px;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `
 const MensagemVitoria = styled.div`
   color: black; 
@@ -49,6 +70,12 @@ const MensagemVitoria = styled.div`
   font-size: 25px;
   font-weight: bold;
   color: #D2691E;
+
+  @media (max-width: 500px) {
+    width: 150%;
+    font-size: 15px;
+    margin-top:12px;
+  }
 `
 const MensagemDerrota = styled.div`
   color: red;
@@ -58,6 +85,12 @@ const MensagemDerrota = styled.div`
   font-size: 25px;
   font-weight: bold; 
   color: #D2691E;
+  @media (max-width: 500px) {
+    width: 150%;
+    font-size: 15px;
+    margin-top:12px;
+  }
+
 `
 
 
@@ -134,12 +167,12 @@ function App() {
         <MensagemVitoria>
         {isVenceu && 'PARABÉNS, VOCÊ GANHOU! Reinicie o jogo, para jogar novamente'}
         </MensagemVitoria>
-        <Placar>
-        <h2> {vitorias} Vitórias, {derrotas} Derrotas</h2>
-        </Placar>
         <ForcaDesenho numeroPalpites = {incorrectPalpites.length}/>
         <ForcaLetras letrasPrevistas ={letrasAcertadas} palavra = {pAdvinhar}/>
       </PartesBoneco>
+      <Placar>
+        <h2> {vitorias} Vitórias, {derrotas} Derrotas</h2>
+        </Placar>
       <Teclado activeLetra={correctPalpites}
         inactiveLetra={incorrectPalpites}
         addLetrasAcertadas={addLetrasAcertadas}
