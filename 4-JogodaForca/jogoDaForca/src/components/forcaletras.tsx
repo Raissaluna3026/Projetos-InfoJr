@@ -21,8 +21,8 @@ export default function ForcaLetras({palavra, letrasPrevistas} : ForcaLetrasProp
     
     return(
         <Pacote>{palavra.split("").map((letra, index) => (
-            <span style={{borderBottom: "0.1em solid white", height: '50px', width: '50px'}} key={index}>
-                <span style={{visibility: letrasPrevistas.includes(letra) ? 'visible' : 'hidden'}}>{letra}</span>
+            <span style={{borderBottom: "0.1em solid #D2691E", height: '50px', width: '50px'}} key={index}>
+                <span style={{visibility: letrasPrevistas.includes(letra) ? 'visible' : 'hidden', color: '#D2691E'}}>{letra}</span>
             </span>
         )) }</Pacote>
     )

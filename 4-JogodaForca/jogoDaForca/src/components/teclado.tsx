@@ -11,7 +11,6 @@ const teclas = [
     'h',
     'i',
     'k',
-    'k',
     'l',
     'm',
     'n',
@@ -37,6 +36,8 @@ width: 600px;
 `
 
 const Button = styled.button<{isActive: boolean}>`
+ background-color: ${(p) => p.isActive ? "#D2691E" : '#A52A2A'};
+ color: white;
  opacity: ${(p) => p.isActive ? "null" : '0.3'};
  &:focus:disabled {
     outline:none;
