@@ -11,6 +11,12 @@ text-transform: uppercase;
 font-family: monospace;
 justify-content:center;
 width: 100%;
+margin-right: 25px;
+
+@media (max-width: 500px) {
+    width: 100%;
+    margin-left:55px;
+  }
 `
 
 interface ForcaLetrasProps{

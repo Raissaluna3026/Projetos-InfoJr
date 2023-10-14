@@ -28,18 +28,19 @@ flex-direction: column;
 gap: 0.8rem;
 width: 350px;
 font-size: 13px;
+margin-right: 25px;
 
 @media (max-width: 500px) {
   width: 80%;
 }
 `
 const Placar = styled.div`
-  top: 20px; 
-  right: 20px;
+  top: 10px; 
+  right: 10px;
   background-color: #D2691E;
   border: 1px solid ##D2691E;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 5px;
+  margin-bottom: 10px;
   margin-right: 50px;
   width: 100%;
   border-radius: 10px;
@@ -94,7 +95,7 @@ const MensagemDerrota = styled.div`
 `
 
 
-const palavras = ['betina']
+const palavras = ['acarajé', 'escondidinho', 'feijoada']
 
 function App() {
   const [vitorias, setVitorias] = useState(0);
@@ -161,6 +162,7 @@ function App() {
   return (
     <Pacote>
       <PartesBoneco>
+        <h2 style={{color: '#D2691E'}}>Dica: Comidas brasileiras</h2>
         <MensagemDerrota>
           {isPerdeu && 'Errou, errou feio, errou rude.. Reinicie o jogo para uma revanche!'}
         </MensagemDerrota>
