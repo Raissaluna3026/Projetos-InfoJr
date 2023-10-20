@@ -4,73 +4,99 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type IlovecatsDocumentDataSlicesSlice = never;
-
 /**
- * Content for iLoveCats documents
+ * Item in *Configurações → Navegação*
  */
-interface IlovecatsDocumentData {
+export interface ConfiguracoesDocumentDataNavegacaoItem {
   /**
-   * Slice Zone field in *iLoveCats*
+   * Link field in *Configurações → Navegação*
    *
-   * - **Field Type**: Slice Zone
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: ilovecats.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
+   * - **API ID Path**: configuracoes.navegacao[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  slices: prismic.SliceZone<IlovecatsDocumentDataSlicesSlice>
-  /**
-   * Meta Description field in *iLoveCats*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: ilovecats.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_description: prismic.KeyTextField;
+  link: prismic.LinkField;
 
   /**
-   * Meta Image field in *iLoveCats*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ilovecats.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-
-  /**
-   * Meta Title field in *iLoveCats*
+   * Label field in *Configurações → Navegação*
    *
    * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: ilovecats.meta_title
-   * - **Tab**: SEO & Metadata
+   * - **Placeholder**: *None*
+   * - **API ID Path**: configuracoes.navegacao[].label
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  meta_title: prismic.KeyTextField;
+  label: prismic.KeyTextField;
 }
 
 /**
- * iLoveCats document from Prismic
+ * Content for Configurações documents
+ */
+interface ConfiguracoesDocumentData {
+  /**
+   * Titulo Site field in *Configurações*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: configuracoes.titulo_site
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  titulo_site: prismic.KeyTextField;
+
+  /**
+   * Meta Descrição field in *Configurações*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: configuracoes.meta_descricao
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_descricao: prismic.KeyTextField;
+
+  /**
+   * Any imagem field in *Configurações*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: configuracoes.any_imagem
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  any_imagem: prismic.ImageField<never>;
+
+  /**
+   * Navegação field in *Configurações*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: configuracoes.navegacao[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  navegacao: prismic.GroupField<
+    Simplify<ConfiguracoesDocumentDataNavegacaoItem>
+  >;
+}
+
+/**
+ * Configurações document from Prismic
  *
- * - **API ID**: `ilovecats`
- * - **Repeatable**: `true`
+ * - **API ID**: `configuracoes`
+ * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type IlovecatsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<IlovecatsDocumentData>,
-    "ilovecats",
+export type ConfiguracoesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ConfiguracoesDocumentData>,
+    "configuracoes",
     Lang
   >;
 
-export type AllDocumentTypes = IlovecatsDocument;
+export type AllDocumentTypes = ConfiguracoesDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -82,9 +108,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      IlovecatsDocument,
-      IlovecatsDocumentData,
-      IlovecatsDocumentDataSlicesSlice,
+      ConfiguracoesDocument,
+      ConfiguracoesDocumentData,
+      ConfiguracoesDocumentDataNavegacaoItem,
       AllDocumentTypes,
     };
   }
