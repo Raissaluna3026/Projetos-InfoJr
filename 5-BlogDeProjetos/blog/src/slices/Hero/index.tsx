@@ -12,14 +12,23 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
-    <section
+    <section className="px-4 py-10 md:py-14 md:px-l lg:py-16"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-    >
-      <PrismicRichText field={slice.primary.heading} />
-      <PrismicRichText field={slice.primary.body} />
-      <PrismicNextLink field={slice.primary.link_botao}>{slice.primary.botao}</PrismicNextLink>
-      <PrismicNextImage field={slice.primary.imagem} />
+    > <div className="mx-auto w-full max-w-6xl border">     
+        <div className="grid grid-cols-1 place-items-center text-center ">
+          <PrismicRichText field={slice.primary.heading} components={{heading1: ({children})=> (
+          <h1 className=" text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-slate-700" >{children}</h1>
+        )
+        }}/>
+          <PrismicRichText field={slice.primary.body} components={{
+          paragraph: ({children}) => (<p className="text-2xl text-center font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8">{children}</p>) 
+        }}/>
+          <PrismicNextLink field={slice.primary.link_botao} className="block w-fit bg-cyan-700 hover:bg-cyan-800 transition-color duration-200 ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base tracking-wider mb-8 md:mb-10">{slice.primary.botao}</PrismicNextLink>
+          <PrismicNextImage field={slice.primary.imagem}
+          className="drop-shadow-xl max-w-4xl w-full" />
+        </div>
+      </div>
     </section>
   );
 };
