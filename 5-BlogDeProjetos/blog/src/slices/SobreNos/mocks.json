@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titulo": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut aliqua sit esse laboris deserunt ea deserunt."
+						}
+					}
+				]
+			},
+			"subt": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Engineer"
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

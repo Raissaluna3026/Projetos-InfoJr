@@ -257,6 +257,61 @@ type HeroSliceVariation = HeroSliceDefault;
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
+/**
+ * Primary content in *SobreNos → Primary*
+ */
+export interface SobreNosSliceDefaultPrimary {
+  /**
+   * Titulo  field in *SobreNos → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.primary.titulo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titulo: prismic.RichTextField;
+
+  /**
+   * Subt field in *SobreNos → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.primary.subt
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subt: prismic.TitleField;
+}
+
+/**
+ * Default variation for SobreNos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SobreNosSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SobreNosSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SobreNos*
+ */
+type SobreNosSliceVariation = SobreNosSliceDefault;
+
+/**
+ * SobreNos Shared Slice
+ *
+ * - **API ID**: `sobre_nos`
+ * - **Description**: SobreNos
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SobreNosSlice = prismic.SharedSlice<
+  "sobre_nos",
+  SobreNosSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -278,6 +333,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      SobreNosSlice,
+      SobreNosSliceDefaultPrimary,
+      SobreNosSliceVariation,
+      SobreNosSliceDefault,
     };
   }
 }
