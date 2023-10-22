@@ -20,6 +20,15 @@
             "allowTargetBlank": true,
             "single": "heading2"
           }
+        },
+        "subt": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subt",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
         }
       },
       "items": {

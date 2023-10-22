@@ -96,7 +96,7 @@ export type ConfiguracoesDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice = SobreNosSlice | HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -338,6 +338,16 @@ export interface SobreNosSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   heading: prismic.TitleField;
+
+  /**
+   * Subt field in *SobreNos → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.primary.subt
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subt: prismic.TitleField;
 }
 
 /**

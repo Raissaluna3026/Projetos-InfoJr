@@ -55,8 +55,11 @@ const SobreNos = ({ slice }: SobreNosProps): JSX.Element => {
         {slice.items.map((item, index) => (
           <div key={index} className="max-w-xs grid sm:place-items-start place-items-center">
             {item.icon && <div className="mb-5"> {icons[item.icon]}</div>}
+            
             <PrismicRichText components={components} field={item.titulo} />
+            <PrismicRichText field={slice.primary.subt} />
             <PrismicRichText components={components} field={item.descricao} />
+            
           </div>
         ))}
       </div>

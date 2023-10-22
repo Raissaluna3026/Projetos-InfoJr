@@ -13,6 +13,17 @@
 						}
 					}
 				]
+			},
+			"subt": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Having"
+						}
+					}
+				]
 			}
 		},
 		"items": [
