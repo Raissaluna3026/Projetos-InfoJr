@@ -244,9 +244,77 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceHorizontalPrimary {
+  /**
+   * Heading field in *Hero → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+
+  /**
+   * Body field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.body
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  body: prismic.RichTextField;
+
+  /**
+   * Botão field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.botao
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  botao: prismic.KeyTextField;
+
+  /**
+   * Link botão field in *Hero → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.link_botao
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_botao: prismic.LinkField;
+
+  /**
+   * Imagem field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.imagem
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagem: prismic.ImageField<never>;
+}
+
+/**
+ * Horizontal variation for Hero Slice
+ *
+ * - **API ID**: `horizontal`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceHorizontal = prismic.SharedSliceVariation<
+  "horizontal",
+  Simplify<HeroSliceHorizontalPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceHorizontal;
 
 /**
  * Hero Shared Slice
@@ -262,24 +330,49 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export interface SobreNosSliceDefaultPrimary {
   /**
-   * Titulo  field in *SobreNos → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: sobre_nos.primary.titulo
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  titulo: prismic.RichTextField;
-
-  /**
-   * Subt field in *SobreNos → Primary*
+   * Heading field in *SobreNos → Primary*
    *
    * - **Field Type**: Title
    * - **Placeholder**: *None*
-   * - **API ID Path**: sobre_nos.primary.subt
+   * - **API ID Path**: sobre_nos.primary.heading
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  subt: prismic.TitleField;
+  heading: prismic.TitleField;
+}
+
+/**
+ * Primary content in *SobreNos → Items*
+ */
+export interface SobreNosSliceDefaultItem {
+  /**
+   * Icone field in *SobreNos → Items*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.items[].icone
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  icone: prismic.SelectField<"siames" | "ragdoll" | "angora" | "shorthair">;
+
+  /**
+   * titulo field in *SobreNos → Items*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.items[].titulo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titulo: prismic.TitleField;
+
+  /**
+   * descriçao field in *SobreNos → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_nos.items[].descricao
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descricao: prismic.RichTextField;
 }
 
 /**
@@ -292,7 +385,7 @@ export interface SobreNosSliceDefaultPrimary {
 export type SobreNosSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<SobreNosSliceDefaultPrimary>,
-  never
+  Simplify<SobreNosSliceDefaultItem>
 >;
 
 /**
@@ -331,10 +424,13 @@ declare module "@prismicio/client" {
       AllDocumentTypes,
       HeroSlice,
       HeroSliceDefaultPrimary,
+      HeroSliceHorizontalPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      HeroSliceHorizontal,
       SobreNosSlice,
       SobreNosSliceDefaultPrimary,
+      SobreNosSliceDefaultItem,
       SobreNosSliceVariation,
       SobreNosSliceDefault,
     };

@@ -3,29 +3,60 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"titulo": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ut aliqua sit esse laboris deserunt ea deserunt."
-						}
-					}
-				]
-			},
-			"subt": {
+			"heading": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Engineer"
+							"text": "Practice"
 						}
 					}
 				]
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icone",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "siames",
+							"type": "Select"
+						}
+					],
+					[
+						"titulo",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Anywhere"
+									}
+								}
+							]
+						}
+					],
+					[
+						"descricao",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Laborum laborum commodo sit ipsum exercitation reprehenderit exercitation mollit eu adipisicing. Voluptate aute magna deserunt fugiat commodo et velit commodo. Aliquip eiusmod anim sint eu nisi nostrud magna sint do nisi ipsum minim proident irure."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
 	}
 ]
