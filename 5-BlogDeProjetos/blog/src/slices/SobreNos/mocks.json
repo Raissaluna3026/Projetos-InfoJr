@@ -20,14 +20,6 @@
 				"__TYPE__": "GroupItemContent",
 				"value": [
 					[
-						"icone",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "siames",
-							"type": "Select"
-						}
-					],
-					[
 						"titulo",
 						{
 							"__TYPE__": "StructuredTextContent",
@@ -35,7 +27,7 @@
 								{
 									"type": "heading3",
 									"content": {
-										"text": "Anywhere"
+										"text": "Neighbor"
 									}
 								}
 							]
@@ -53,6 +45,14 @@
 									}
 								}
 							]
+						}
+					],
+					[
+						"icon",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "calendar",
+							"type": "Select"
 						}
 					]
 				]

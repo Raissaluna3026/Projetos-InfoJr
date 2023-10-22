@@ -7,11 +7,23 @@ import Heading from "@/components/heading";
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
     <Heading
-      as="h1"
+      as="h2"
       size="md"
-      className="text-center mb-12">
+      className=" text-center mb-12">
         {children}
       </Heading>
+  ),
+
+  heading3: ({children}) => (
+    <Heading
+      as="h3"
+      size="sm"
+      className="mb-3 font-medium sm:text-left text-center ">
+        {children}
+      </Heading>
+  ),
+  paragraph: ({children}) => (
+    <p className="text-base font-medium font-body text-slate-600 sm:text-left text center">{children}</p>
   )
 }
 
@@ -39,12 +51,12 @@ const SobreNos = ({ slice }: SobreNosProps): JSX.Element => {
     > 
       <PrismicRichText components={components} field={slice.primary.heading} />
 
-      <div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 max-w-5xl gap-x-8 gap-y-12 mx-auto sm:place-items-start placte-items-center">
         {slice.items.map((item, index) => (
-          <div key={index}>
-            {item.icone && <> {icons[item.icone]}</>}
-            <PrismicRichText field={item.titulo} />
-            <PrismicRichText field={item.descricao} />
+          <div key={index} className="max-w-xs grid sm:place-items-start place-items-center">
+            {item.icon && <div className="mb-5"> {icons[item.icon]}</div>}
+            <PrismicRichText components={components} field={item.titulo} />
+            <PrismicRichText components={components} field={item.descricao} />
           </div>
         ))}
       </div>

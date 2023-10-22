@@ -345,14 +345,14 @@ export interface SobreNosSliceDefaultPrimary {
  */
 export interface SobreNosSliceDefaultItem {
   /**
-   * Icone field in *SobreNos → Items*
+   * Icon field in *SobreNos → Items*
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
-   * - **API ID Path**: sobre_nos.items[].icone
+   * - **API ID Path**: sobre_nos.items[].icon
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  icone: prismic.SelectField<"siames" | "ragdoll" | "angora" | "shorthair">;
+  icon: prismic.SelectField<"calendar" | "grafico" | "trevo" | "ampulheta">;
 
   /**
    * titulo field in *SobreNos → Items*

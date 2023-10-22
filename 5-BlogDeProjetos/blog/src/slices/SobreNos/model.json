@@ -23,16 +23,16 @@
         }
       },
       "items": {
-        "icone": {
+        "icon": {
           "type": "Select",
           "config": {
-            "label": "Icone",
+            "label": "Icon",
             "placeholder": "",
             "options": [
-              "siames",
-              "ragdoll",
-              "angora",
-              "shorthair"
+              "calendar",
+              "grafico",
+              "trevo",
+              "ampulheta"
             ]
           }
         },
