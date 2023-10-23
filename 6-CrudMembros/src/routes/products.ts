@@ -5,6 +5,7 @@ const productRouter = Router();
 productRouter.post('/', productController.insertProduct)
 productRouter.get('/', productController.listProducts)
 productRouter.get('/:id', productController.getProduct)
+productRouter.get('/email/:email', productController.getProductByEmail);
 productRouter.delete('/:id', productController.deleteProduct)
 productRouter.put('/:id', productController.updateProduct)
 

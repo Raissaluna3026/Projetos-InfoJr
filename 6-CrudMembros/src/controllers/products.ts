@@ -85,11 +85,8 @@ const getProduct = (req: Request, res: Response) => {
     const id = parseInt(req.params.id)
     {
         if(!validateNumber(id))
-            return badRequest(res,"id inválido")
-
-        
+            return badRequest(res,"id inválido")  
     }
-
 
     return productModel.getProduct(id)
         .then((product) => {
@@ -100,6 +97,20 @@ const getProduct = (req: Request, res: Response) => {
         })
         .catch(err=> internalServerError(res, err))
 }
+
+const getProductByEmail = (req: Request, res: Response) => {
+    const email = req.params.email; 
+
+    return productModel.getProductByEmail(email)
+        .then((product) => {
+            if (product) {
+                return res.json(product);
+            } else {
+                return notFound(res);
+            }
+        })
+        .catch((err) => internalServerError(res, err));
+};
 
 const deleteProduct = async (req: Request, res: Response) => {
     const id = parseInt(req.params.id)
@@ -125,5 +136,6 @@ export const productController = {
     listProducts,
     getProduct,
     deleteProduct,
-    updateProduct
+    updateProduct,
+    getProductByEmail
 }
