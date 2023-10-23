@@ -38,6 +38,12 @@ const getProductByEmail = async (email: string) => {
     const retorno = await dbQueryFirst('SELECT * FROM product WHERE email = ?', [email]);
     return retorno as Product | undefined;
 }
+//buscar por nome
+const getProductByName = async (name: string) => {
+    const query = 'SELECT * FROM product WHERE name = ?';
+    const retorno = await dbQuery(query, [name])
+    return retorno as Product[];
+}
 
 //deletar
 const deleteProduct = async (id: number) => {
@@ -50,5 +56,6 @@ export const productModel = {
     getProduct,
     deleteProduct,
     updateProduct,
-    getProductByEmail
+    getProductByEmail,
+    getProductByName
 }

@@ -112,6 +112,19 @@ const getProductByEmail = (req: Request, res: Response) => {
         .catch((err) => internalServerError(res, err));
 };
 
+const getProductByName = (req: Request, res: Response) => {
+    const name = req.params.name;
+
+    return productModel.getProductByName(name)
+        .then((product) => {
+            if(product.length > 0)
+                return res.json(product)
+            else
+                return notFound(res)
+        })
+        .catch(err=> internalServerError(res, err))
+}
+
 const deleteProduct = async (req: Request, res: Response) => {
     const id = parseInt(req.params.id)
     {
@@ -137,5 +150,6 @@ export const productController = {
     getProduct,
     deleteProduct,
     updateProduct,
-    getProductByEmail
+    getProductByEmail,
+    getProductByName
 }
