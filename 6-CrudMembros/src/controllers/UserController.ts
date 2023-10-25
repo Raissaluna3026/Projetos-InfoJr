@@ -111,5 +111,45 @@ export default{
         } catch (error) {
           return response.json({ message: error.message });
         }
-      },
+    },
+    async updateUser(request:Request, response: Response){
+        try{
+            const { id } = request.params;
+            const { name, email, idade, cidade, estado } = request.body; 
+    
+            // Verifique se o id pode ser convertido em um número
+            const idNumber = Number(id);
+            if (isNaN(idNumber)) {
+                return response.json({
+                    error: true,
+                    message: 'Error: Id inválido.',
+                });
+            }
+    
+            const userExists = await prisma.user.findUnique({
+                where: { id: idNumber },
+            });
+    
+            if(!userExists){
+                return response.json({
+                    error: true,
+                    message: 'Error: Usuário não encontrado.',
+                });
+            }
+    
+            const updatedUser = await prisma.user.update({
+                where: { id: idNumber },
+                data: { name, email, idade, cidade, estado },
+              });
+    
+            return response.json({
+                error: false,
+                message: 'Sucesso: Usuário atualizado.',
+                updatedUser
+            });
+    
+        }catch(error) {
+            return response.json({ message: error.message });
+        }
+    },
 };
