@@ -12,6 +12,10 @@ app.get('/', (request,response) => {
 });
 
 app.post('/createUser', UserController.createUser);
+app.get('/listUser/:id', UserController.ListUser);
+app.get('/findUserByName/:name', UserController.findUserByName);
+app.get('/findUserByEmail/:email', UserController.findUserByEmail);
+
 
 app.listen(PORT, ()=> console.log('Servidor rodando'));
 
