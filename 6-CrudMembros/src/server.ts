@@ -16,6 +16,7 @@ app.get('/listUser/:id', UserController.ListUser);
 app.get('/findUserByName/:name', UserController.findUserByName);
 app.get('/findUserByEmail/:email', UserController.findUserByEmail);
 app.put('/updateUser/:id', UserController.updateUser);
+app.delete('/deleteUser/:id', UserController.deleteUser);
 
 
 app.listen(PORT, ()=> console.log('Servidor rodando'));
