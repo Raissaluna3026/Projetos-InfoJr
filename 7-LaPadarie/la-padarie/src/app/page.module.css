@@ -1,0 +1,104 @@
+.main{
+    width: 100%;
+}
+
+
+.header{
+    background-color: #965A1B;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img{
+    width: 100px;
+    margin-bottom: 50px;
+}
+.headerSection{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    height: 90px;
+    margin-top: -45px;
+}
+
+.headerSection img {
+    height: 30%;
+}
+
+.pessoasFila{
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.paesVendidos{
+    background-color: white;
+    width: 100%;
+    margin-left: 18px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+}
+.entrada{
+    background-color: #5F3305;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+    border-radius: 5px; 
+}
+
+.sec{
+    background-color: #E5CF94;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.rodape{
+    background-color: #E5CF94;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+.pessoasNaFila{
+    width: 60%;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.parteBranca{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 5px; 
+    margin-top: 10px;
+}
+.paes{
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    padding-top: 6px;
+}
+.pessoasNaFila img{
+    height: 20px;
+}
+.adicionarPessoas{
+    color: inherit;
+    text-decoration: none;
+    color: #5F3305;
+}
+
