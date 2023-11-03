@@ -16,6 +16,29 @@ export default function Home() {
     setVisivel(!visivel);
   };
 
+  const [nome, setNome] = useState('');
+  const [totalPaes, setTotalPaes] = useState(0);
+
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
+
+    const response = await fetch('/api/sua-rota', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: nome,
+        paes: totalPaes,
+      }),
+    });
+
+    const data = await response.json();
+
+    // Faça algo com data...
+  };
+
+
   return (
     <>
       <main className={styles.main}>
@@ -60,17 +83,17 @@ export default function Home() {
       </main>
       {visivel && (
         <div className={styles.fundo} id='fundo'>
-          <div className={styles.modal}>
+          <form className={styles.modal} onSubmit={handleSubmit}>
             <strong>Adicionar pessoas a fila</strong>
             <div className={styles.inputs}>
-              <input className={styles.inp} type="text" placeholder='Nome completo do cliente: '/>
-              <input className={styles.inp} type="number" placeholder='Total de pães: '/>
+              <input className={styles.inp} type="text" placeholder='Nome completo do cliente: ' value={nome} onChange={(e) => setNome(e.target.value)}/>
+              <input className={styles.inp} type="number" placeholder='Total de pães: ' value={totalPaes} onChange={(e) => setTotalPaes(Number(e.target.value))}/>
             </div>
             <div className={styles.botoes}>
-              <button className={styles.but2}>Enviar</button>
+              <button className={styles.but2} type="submit">Enviar</button>
               <button className={styles.but} onClick={() => setVisivel(false)}>Cancelar</button>
             </div>
-          </div>
+          </form>
         </div>
       )}
   </>
