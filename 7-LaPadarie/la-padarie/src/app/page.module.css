@@ -102,3 +102,75 @@
     color: #5F3305;
 }
 
+.fundo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E5CF9480;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: relative;
+    width: 500px;
+    height: 270px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: #5F3305;
+    justify-content: space-between;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 5px;
+}
+.inp{
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 5px;
+    height: 44px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    color: #7D7D7D;
+}
+.botoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.botoes button{
+    width: 48%;
+    height: 50px;
+}
+.but{
+    background-color: white;
+    color: red;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 1px;
+    cursor: pointer;
+    
+}
+.but2{
+    background-color: #5F3305;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.but2:hover{
+    background-color: #5F3305;
+    transform: scale(1.1);
+}
+.but:hover{
+    background-color: white;
+    transform: scale(1.1);
+}
+
