@@ -22,7 +22,7 @@ export default function Home() {
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    const response = await fetch('/api/sua-rota', {
+    const response = await fetch('api/inicial.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
