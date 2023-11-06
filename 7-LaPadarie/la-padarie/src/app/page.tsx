@@ -2,8 +2,7 @@
 "use client";
 import Image from 'next/image'
 import styles from './page.module.css';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 
 
 
@@ -22,21 +21,15 @@ export default function Home() {
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    const response = await fetch('api/inicial.js', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: nome,
-        paes: totalPaes,
-      }),
-    });
-
-    const data = await response.json();
-
-    // Faça algo com data...
   };
+
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+    fetch('/api/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+  }, [])
 
 
   return (
