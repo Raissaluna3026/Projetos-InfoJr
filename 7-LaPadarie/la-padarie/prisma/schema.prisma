@@ -15,4 +15,5 @@ model Clientes{
   name String
   paes Int 
   naFila Boolean @default(true)
+
 }

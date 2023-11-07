@@ -11,14 +11,7 @@ import Fila from '@/components/fila';
 
 export default function Home() {
 
-  const [users, setUsers] = useState([])
-
-  useEffect(() => {
-    fetch('/api/fila')
-      .then(res => res.json())
-      .then(data => setUsers(data))
-  }, [])
-
+  
 
   return (
     

@@ -1,8 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '../app/page.module.css';
+import axios from 'axios';
+import { Console } from 'console';
 
 
 export default function fila(){
+
+    const [clients, setClients] = useState([]);
+    const valorPao = 0.5;
+
+    useEffect(() => {
+    axios.get('http://localhost:3000/api/hello')
+      .then(res => {
+        setClients(res.data);
+        console.log(clients)
+      })
+      .catch(err => console.error(err));
+    }, []);
+
+
     const [visivel, setVisivel] = useState(false);
 
     const handleClick = () => {
@@ -20,19 +36,22 @@ export default function fila(){
     <>
         <div className={styles.pessoasNaFila}>
             <p className={styles.adicionarPessoas} onClick={handleClick}><strong>+ Adicionar pessoas a fila</strong></p>
-            <div className={styles.parteBranca}>
-              <div className={styles.cliente}>
-                <p ><strong>nome cliente</strong>
-                </p>
-                <div className={styles.paes}>
-                  <p><strong>Total de pães:</strong> possivel dado</p>
-                  <p><strong>Total a pagar:</strong> outro possivel dado</p>
+            {clients && clients.map(client => (
+              <div key={client.id} className={styles.parteBranca}>
+                <div className={styles.cliente}>
+                  <p ><strong>{client.name}</strong>
+                  </p>
+                  <div className={styles.paes}>
+                    <p><strong>Total de pães:</strong> {client.paes}</p>
+                    <p><strong>Total a pagar:</strong> R$ {client.paes * valorPao}</p>
+                  </div>
+                </div>
+                <div>
+                  <img src="\logo\Icon (1).svg" alt="" />
                 </div>
               </div>
-              <div>
-                <img src="\logo\Icon (1).svg" alt="" />
-              </div>
-            </div>
+            ))}
+
         </div>
         {visivel && (
             <div className={styles.fundo} id='fundo'>
