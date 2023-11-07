@@ -14,7 +14,7 @@ export default function Home() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    fetch('/api/users')
+    fetch('/api/fila')
       .then(res => res.json())
       .then(data => setUsers(data))
   }, [])
@@ -36,6 +36,6 @@ export default function Home() {
         Com 💛 Info Jr UFBA 2022
       </footer>
     </main>
-    
+
   )
 }
