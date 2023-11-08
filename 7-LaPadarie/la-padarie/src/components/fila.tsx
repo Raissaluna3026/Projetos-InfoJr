@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../app/page.module.css';
 import axios from 'axios';
-import { Console } from 'console';
 
 
 export default function fila(){
