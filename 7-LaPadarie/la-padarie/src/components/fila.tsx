@@ -5,17 +5,34 @@ import axios from 'axios';
 
 export default function fila(){
 
+  
+  async function sendPutRequest(id: any) {
+    try {
+      const response = await axios.put('http://localhost:3000/api/atender', {
+        id: id,
+        naFila: false
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+
+
     const [clients, setClients] = useState([]);
     const valorPao = 0.5;
 
     useEffect(() => {
-    axios.get('http://localhost:3000/api/hello')
+    axios.get('http://localhost:3000/api/fila')
       .then(res => {
         setClients(res.data);
         console.log(clients)
       })
       .catch(err => console.error(err));
     }, []);
+
+
 
 
     const [visivel, setVisivel] = useState(false);
@@ -46,7 +63,7 @@ export default function fila(){
                   </div>
                 </div>
                 <div>
-                  <img src="\logo\Icon (1).svg" alt="" />
+                  <img onClick={() => sendPutRequest(client.id)} src="\logo\Icon (1).svg" alt="" />
                 </div>
               </div>
             ))}
