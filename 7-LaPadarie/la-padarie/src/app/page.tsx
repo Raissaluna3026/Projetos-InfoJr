@@ -21,7 +21,6 @@ export default function Home() {
       </header>
       <section className={styles.sec}>
 
-        <Cards />
         <Fila />
         
       </section>

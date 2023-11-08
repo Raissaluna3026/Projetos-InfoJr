@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../app/page.module.css';
 import axios from 'axios';
+import Cards from './cards';
 
 
 export default function fila(){
@@ -33,8 +34,6 @@ export default function fila(){
     }, []);
 
 
-
-
     const [visivel, setVisivel] = useState(false);
 
     const handleClick = () => {
@@ -50,6 +49,7 @@ export default function fila(){
     };
     return(
     <>
+      <Cards nClients={clients.length} />
         <div className={styles.pessoasNaFila}>
             <p className={styles.adicionarPessoas} onClick={handleClick}><strong>+ Adicionar pessoas a fila</strong></p>
             {clients && clients.map(client => (
