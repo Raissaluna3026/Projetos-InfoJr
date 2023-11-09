@@ -7,7 +7,7 @@ import Cards from './cards';
 export default function fila(){
 
   
-  async function sendPutRequest(id: any) {
+  async function sendPutRequest(id: number) {
     try {
       const response = await axios.put('http://localhost:3000/api/atender', {
         id: id,

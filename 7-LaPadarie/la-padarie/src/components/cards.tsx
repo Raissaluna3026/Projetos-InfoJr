@@ -28,14 +28,14 @@ export default function cards({nClients}){
             <div className={styles.paesVendidos}>
             <div className={styles.textos}>
                 <p>Pães vendidos</p>
-                <h2>{soma.total}</h2>
+                <h2>{soma.total || "0"}</h2>
             </div>
             <img src="\logo\Group 1.svg" alt="" />
             </div>
             <div className={styles.entrada}>
             <div className={styles.textos}>
                 <p>Entrada</p>
-                <h2>R$ {soma.total * valorPao}</h2>
+                <h2>R$ {soma.total * valorPao || "0.00"}</h2>
             </div>
             <img src="\logo\Group 2.svg" alt="" />
             </div>
