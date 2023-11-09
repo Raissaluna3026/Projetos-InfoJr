@@ -31,7 +31,7 @@ export default function fila(){
         console.log(clients)
       })
       .catch(err => console.error(err));
-    }, []);
+    }, [clients]);
 
 
     const [visivel, setVisivel] = useState(false);

@@ -14,7 +14,7 @@ export default function cards({nClients}){
             setSoma(res.data);
           })
           .catch(err => console.error(err));
-        }, []);
+        }, [soma]);
 
     return(
         <div className={styles.headerSection}>

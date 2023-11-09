@@ -13,7 +13,7 @@ datasource db {
 model Clientes{
   id Int @id @default(autoincrement())
   name String
-  paes Int 
+  paes Int
   naFila Boolean @default(true)
 
 }
