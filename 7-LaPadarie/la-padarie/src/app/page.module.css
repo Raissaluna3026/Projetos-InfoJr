@@ -180,3 +180,34 @@
     transform: scale(1.1);
 }
 
+
+@media (max-width: 400px) {
+    .headerSection{
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+        width: 85%;
+               
+    }
+    .pessoasFila{
+        margin: 0;
+        box-sizing: border-box;
+        height: 100px; 
+    }
+    .entrada{
+        margin: 0;
+        box-sizing: border-box;
+        height: 100px; 
+    }
+    .paesVendidos{
+        margin: 0;
+        box-sizing: border-box;
+        height: 100px; 
+    }
+    .paes{
+        flex-direction: column;
+    }
+    .pessoasNaFila{
+        width: 85%;
+    }
+  }
