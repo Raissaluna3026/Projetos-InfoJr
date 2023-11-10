@@ -4,7 +4,7 @@ import styles from '../app/page.module.css';
 
 
 export default function cards({nClients}){
-
+    //chamando a rota que retorna a soma dos paes vendidos
     const [soma, setSoma] = useState(0);
     const valorPao = 0.5;
 

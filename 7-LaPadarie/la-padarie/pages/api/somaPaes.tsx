@@ -10,3 +10,5 @@ export default async function sumPaes(req, res) {
   const soma = await db.get('SELECT SUM(paes) as total FROM Clientes WHERE naFila = 0');
   res.json(soma)
 }
+
+//rota que retorna a soma dos paes

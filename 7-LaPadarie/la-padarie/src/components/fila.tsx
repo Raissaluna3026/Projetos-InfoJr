@@ -6,7 +6,7 @@ import Cards from './cards';
 
 export default function fila(){
 
-  
+  //atualizando o status dos clientes da fila (funçao da lixeira)
   async function sendPutRequest(id: number) {
     try {
       const response = await axios.put('http://localhost:3000/api/atender', {
@@ -19,8 +19,21 @@ export default function fila(){
     }
   }
 
+  async function createClient(name: string, paes: number) {
+    try {
+      const response = await axios.post('http://localhost:3000/api/cadastro', {
+        name: name,
+        paes: paes
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
 
+
+  //chamado a rota que retorna os clientes e q atraves do map serão jogados na tela 
     const [clients, setClients] = useState([]);
     const valorPao = 0.5;
 
@@ -28,25 +41,20 @@ export default function fila(){
     axios.get('http://localhost:3000/api/fila')
       .then(res => {
         setClients(res.data);
-        console.log(clients)
       })
       .catch(err => console.error(err));
     }, [clients]);
 
-
+  //modal
     const [visivel, setVisivel] = useState(false);
 
     const handleClick = () => {
         setVisivel(!visivel);
     };
-
+    //tentativa de enviar os dados do input para o banco de dados
     const [nome, setNome] = useState('');
     const [totalPaes, setTotalPaes] = useState(0);
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
-        e.preventDefault();
-
-    };
     return(
     <>
       <Cards nClients={clients.length} />
@@ -71,14 +79,14 @@ export default function fila(){
         </div>
         {visivel && (
             <div className={styles.fundo} id='fundo'>
-              <form className={styles.modal} onSubmit={handleSubmit}>
+              <form className={styles.modal} >
                 <strong>Adicionar pessoas a fila</strong>
                 <div className={styles.inputs}>
                   <input className={styles.inp} type="text" placeholder='Nome completo do cliente: ' value={nome} onChange={(e) => setNome(e.target.value)}/>
                   <input className={styles.inp} type="number" placeholder='Total de pães: ' value={totalPaes} onChange={(e) => setTotalPaes(Number(e.target.value))}/>
                 </div>
                 <div className={styles.botoes}>
-                  <button className={styles.but2} type="submit">Enviar</button>
+                  <button className={styles.but2} type="submit" onClick={() => createClient(nome, totalPaes)}>Enviar</button>
                   <button className={styles.but} onClick={() => setVisivel(false)}>Cancelar</button>
                 </div>
               </form>

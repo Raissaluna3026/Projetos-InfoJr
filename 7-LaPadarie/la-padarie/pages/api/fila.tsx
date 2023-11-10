@@ -10,3 +10,5 @@ export default async function getUsers(req, res) {
   const clients = await db.all('SELECT * FROM Clientes WHERE naFila')
   res.json(clients)
 }
+
+//rota q retorna os clientes q estao na fila, ou seja fila = true
