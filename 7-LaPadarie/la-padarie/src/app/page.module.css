@@ -130,6 +130,7 @@
     box-sizing: border-box;
     color: #5F3305;
     justify-content: space-between;
+    border-radius: 5px;
 }
 .inputs{
     display: flex;
@@ -209,5 +210,19 @@
     }
     .pessoasNaFila{
         width: 85%;
+    }
+    .modal {
+        max-width: 85%;
+        border-radius: 5px;
+        height: auto;
+        text-align: center;
+    }
+    .botoes{
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 40px;
+    }
+    .botoes button{
+        width: 100%;
     }
   }
