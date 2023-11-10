@@ -53,7 +53,7 @@ export default function fila(){
     };
     //tentativa de enviar os dados do input para o banco de dados
     const [nome, setNome] = useState('');
-    const [totalPaes, setTotalPaes] = useState(0);
+    const [totalPaes, setTotalPaes] = useState('');
 
     return(
     <>
