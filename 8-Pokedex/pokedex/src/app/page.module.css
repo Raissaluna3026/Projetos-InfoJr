@@ -52,6 +52,7 @@
   margin-bottom: 15px;
   border-radius: 20px;
   align-items: center;
+  justify-content: space-between;
 }
 .pokemons{
   display: flex;
@@ -66,5 +67,40 @@
   align-items: center;
 }
 .pokemon img{
-  height: 80%;
+  height: 85px;
+}
+.titulo{
+  font-size: 20px;
+  margin-bottom: 10px;
+} 
+.grass{
+  font-size: 11px;
+  background-color: #7AC74C;
+  margin-bottom: 5px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: normal;
+  width: 60px;
+}
+.poison{
+  font-size: 11px;
+  background-color: #A33EA1;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: normal;
+  width: 60px;
+}
+.infos{
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
