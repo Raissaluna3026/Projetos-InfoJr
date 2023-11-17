@@ -9,6 +9,8 @@ import Header from './header';
 export default function Body(){
 
     const [pokemons, setPokemons] = useState([]);
+    const [pokemonsFiltrados, setPokemonsFiltrados] = useState([]);
+
 
     useEffect(() => {
         getPokemons();
@@ -20,21 +22,25 @@ export default function Body(){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
         }
         console.log(endpoints);
-        var response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
+        var response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => {
+            setPokemons(res);
+            setPokemonsFiltrados(res);});
+
 
     }
 
-  const pokemonFilter = (name: any) => {
-    var pokemonsFiltrados = [];
-    console.log(name)
-    // for (var i in pokemons){
-    //     if (pokemons[i].name.includes(name)) {
-    //         pokemonsFiltrados.push(pokemons[i]);
-    //     }
-    // }
-    // console.log(pokemonsFiltrados)
-    //setPokemons(pokemonsFiltrados);
-};
+    const pokemonFilter = (name: any) => {
+        var novosPokemonsFiltrados = [];
+        console.log(name)
+    
+        for (var i in pokemons){
+            if (pokemons[i].data.name.includes(name)) {
+                novosPokemonsFiltrados.push(pokemons[i]);
+            }
+        }
+    
+        setPokemonsFiltrados(novosPokemonsFiltrados);
+    };
 
     return(
     <>
@@ -43,7 +49,7 @@ export default function Body(){
             <div className={styles.todosJuntos}>
                 Pokédex
                 <div className={styles.pokemons}>
-                    {pokemons.map((pokemon, key) => (
+                    {pokemonsFiltrados.map((pokemon, key) => (
                     <div key={key} className={styles.pokemon}>
                         <div className={styles.infos}>
                             <h2 className={styles.titulo}> {pokemon.data.name}</h2>
