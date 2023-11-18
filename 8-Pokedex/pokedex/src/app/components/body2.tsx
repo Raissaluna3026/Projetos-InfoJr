@@ -19,7 +19,7 @@ export default function Body({login}){
         setPokemonsFavoritos(res.data);
         })
         .catch(err => console.error(err));
-    }, []);
+    }, [pokemonsFavoritos]);
 
 
     const [visivel, setVisivel] = useState(false);
@@ -28,19 +28,7 @@ export default function Body({login}){
         setVisivel(!visivel);
     };
     
-
-
-    async function favoritos(pokemon: string, login: string) {
-        try {
-          const response = await axios.post('http://localhost:3000/api/favoritar', {
-            pokemon: pokemon,
-            login: login
-          });
-          console.log(response.data);
-        } catch (error) {
-          console.error(error);
-        }
-      }
+    
 
     console.log(login)
 

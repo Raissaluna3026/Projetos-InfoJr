@@ -45,6 +45,7 @@ export default function Body({login}){
         setVisivel(!visivel);
     };
     
+    
     async function favoritos(pokemon: string, login: string, imagem:string) {
         try {
           const response = await axios.post('http://localhost:3000/api/favoritar', {
