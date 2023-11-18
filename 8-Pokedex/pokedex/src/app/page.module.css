@@ -147,6 +147,9 @@
 .pokemon img{
   height: 85px;
 }
+.pokemonImg{
+  height: 85px;
+}
 .titulo{
   font-size: 20px;
   margin-bottom: 10px;
@@ -193,4 +196,18 @@
   width: 15px;
   height: auto;
   position: absolute;
+}
+
+@media (max-width: 400px){
+  .pesquisa{
+    width: 90vw;
+  }
+  .todosJuntos{
+    align-items: center;
+    width: 90%;
+  }
+  .pokemon{
+    width: 90%;
+  }
+
 }

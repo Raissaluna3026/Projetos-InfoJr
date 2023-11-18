@@ -86,7 +86,7 @@ export default function Body({login}){
                             <p className={styles.grass}>GRASS</p>
                             <p className={styles.poison}>POISON</p>
                         </div>
-                        <img src={pokemon.data.sprites.front_default} />
+                        <img className={styles.pokemonImg} src={pokemon.data.sprites.front_default} />
                     </div>    
                     ))}                   
                 </div>
