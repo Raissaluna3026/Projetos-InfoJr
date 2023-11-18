@@ -21,4 +21,6 @@ model Favs{
   id Int @id @default(autoincrement())
   pokemon String 
   login String 
+  imagem String
 }
+

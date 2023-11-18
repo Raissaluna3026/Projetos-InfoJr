@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from './header';
 
-export default function Body(){
+export default function Body({login}){
 
     const [pokemons, setPokemons] = useState([]);
     const [pokemonsFiltrados, setPokemonsFiltrados] = useState([]);
@@ -39,6 +39,27 @@ export default function Body(){
     
         setPokemonsFiltrados(novosPokemonsFiltrados);
     };
+    const [visivel, setVisivel] = useState(false);
+
+    const estrelaFav = () => {
+        setVisivel(!visivel);
+    };
+    
+    async function favoritos(pokemon: string, login: string, imagem:string) {
+        try {
+          const response = await axios.post('http://localhost:3000/api/favoritar', {
+            pokemon: pokemon,
+            login: login,
+            imagem: imagem
+          });
+          console.log('rodando')
+          console.log(response.data);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+    console.log(login)
 
         
     return(
@@ -50,6 +71,13 @@ export default function Body(){
                 <div className={styles.pokemons}>
                     {pokemonsFiltrados.map((pokemon, key) => (
                     <div key={key} className={styles.pokemon}>
+                        <div className={styles.estrelas}>
+                            <img onClick={() => favoritos(pokemon.data.name, login, pokemon.data.sprites.front_default)}src="estrela.png" alt="" />
+                            {visivel &&(
+                                <img onClick={() => estrelaFav()} src="estrela (1).png" alt="" />
+                            )}
+                            
+                        </div>
                         <div className={styles.infos}>
                             <h2 className={styles.titulo}> {pokemon.data.name}</h2>
                             <p className={styles.grass}>GRASS</p>

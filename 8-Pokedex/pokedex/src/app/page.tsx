@@ -10,9 +10,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      
-      <Body/>
-      <Login />
+      <Login/> 
     </main>
   )
   
