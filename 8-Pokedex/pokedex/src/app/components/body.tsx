@@ -21,11 +21,9 @@ export default function Body(){
         for (var i = 1; i <= 15; i++){
             endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
         }
-        console.log(endpoints);
         var response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => {
             setPokemons(res);
             setPokemonsFiltrados(res);});
-
 
     }
 
@@ -42,12 +40,13 @@ export default function Body(){
         setPokemonsFiltrados(novosPokemonsFiltrados);
     };
 
+        
     return(
     <>
     <Header pokemonFilter={pokemonFilter}/>
         <div className={styles.body}>
             <div className={styles.todosJuntos}>
-                Pokédex
+                <h2 className={styles.titulao}>Pokédex</h2>
                 <div className={styles.pokemons}>
                     {pokemonsFiltrados.map((pokemon, key) => (
                     <div key={key} className={styles.pokemon}>

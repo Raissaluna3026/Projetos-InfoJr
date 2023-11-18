@@ -43,6 +43,11 @@
   width: 60vw;
   box-sizing: border-box;
 }
+.titulao{
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 12px;
+}
 .pokemon{
   background-color: #7AC74C1A;  
   display: flex;
