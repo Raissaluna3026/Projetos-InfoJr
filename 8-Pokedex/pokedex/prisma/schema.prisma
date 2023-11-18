@@ -22,5 +22,6 @@ model Favs{
   pokemon String 
   login String 
   imagem String
+  chave String @unique
 }
 

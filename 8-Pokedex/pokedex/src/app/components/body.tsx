@@ -48,10 +48,12 @@ export default function Body({login}){
     
     async function favoritos(pokemon: string, login: string, imagem:string) {
         try {
+        const chave = `${pokemon}-${login}`;
           const response = await axios.post('http://localhost:3000/api/favoritar', {
             pokemon: pokemon,
             login: login,
-            imagem: imagem
+            imagem: imagem,
+            chave: chave
           });
           console.log('rodando')
           console.log(response.data);

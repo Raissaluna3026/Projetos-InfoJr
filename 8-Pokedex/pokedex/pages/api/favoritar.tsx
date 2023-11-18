@@ -7,14 +7,14 @@ export default async function cadastro(req, res) {
     driver: sqlite3.Database
   })
 
-  const { pokemon, login, imagem } = req.body;
+  const { pokemon, login, imagem, chave } = req.body;
 
   if (!pokemon || !login) {
     return res.status(400).json({ error: 'Login e pokemons sao necessários' });
   }
 
   try {
-    const result = await db.run(`INSERT INTO Favs (pokemon, login,imagem) VALUES (?, ?, ?)`, [pokemon, login,imagem]);
+    const result = await db.run(`INSERT INTO Favs (pokemon, login,imagem, chave) VALUES (?, ?, ?, ?)`, [pokemon, login,imagem, chave]);
     res.status(201).json({ success: true, id: result.lastID });
   } catch (error) {
     res.status(500).json({ error: 'Algo deu errado ao adicionar o cliente' });

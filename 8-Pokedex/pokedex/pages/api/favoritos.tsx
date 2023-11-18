@@ -7,7 +7,7 @@ export default async function getFavoritos(req, res) {
     driver: sqlite3.Database
   })
 
-  const favoritos = await db.all('SELECT pokemon, imagem FROM Favs GROUP BY pokemon')
+  const favoritos = await db.all('SELECT * FROM Favs')
   res.json(favoritos)
 }
 
