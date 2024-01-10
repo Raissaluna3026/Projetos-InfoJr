@@ -11,7 +11,7 @@ export default function Body({login}){
     const [pokemons, setPokemons] = useState([]);
     const [pokemonsFiltrados, setPokemonsFiltrados] = useState([]);
 
-
+    //retorna todos os pokemons
     useEffect(() => {
         getPokemons();
 

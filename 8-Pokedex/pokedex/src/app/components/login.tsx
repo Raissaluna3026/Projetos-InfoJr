@@ -10,6 +10,7 @@ import Body2 from "./body2";
 
 export default  function Login() {
 
+    //essa função esta chamadno a rota para retornar usuarios 
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
@@ -21,22 +22,22 @@ export default  function Login() {
   }, []);
   console.log(usuarios)
 
-
+  //função dos inputs de login e senha, quando clicar no botao se o long e a senha existir no bd o login some
   const [login, setLogin] = useState('');
   const [senha, setSenha] = useState('');
 
-    const logarClick = (login: string, senha: string) => {
+    const logarClick = (loginFunc: string, senhaFunc: string) => {
       for (var i in usuarios){
-        if (usuarios[i].login==login && usuarios[i].senha==senha){
+        if (usuarios[i].login==loginFunc && usuarios[i].senha==senhaFunc){
           setVisivel(!visivel);
-          console.log('usuario logado')
+          //console.log('usuario logado')
           return
         }
       }
       alert("usuário não encontrado")
     };
 
-
+    //
     const [visivel, setVisivel] = useState(true);
 
     const handleClick = () => {
@@ -44,11 +45,13 @@ export default  function Login() {
     };
 
 
-
+    //se eu quero usar uma varaivel do login  no header eu chamo o componente login vc vai chamar o header dentro do login
+    // e la no componente header vou colocar a variavel la nos parametros da função default para receber os vlaores dessa variavel
     return (
         <>
         <Body login={login}/>
         <Body2 login={login}/>
+
         {visivel && (
         <main className={styles.main2}>
             <form className={styles.modal} >
