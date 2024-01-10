@@ -15,3 +15,16 @@ Também ganhei experiência em criar servidores eficientes e escaláveis com Nod
 
 Aprendi a trabalhar efetivamente em um ambiente de equipe, a resolver problemas de forma criativa e a adaptar-me a novas tecnologias e técnicas. 
 Também aprimorei minhas habilidades em escrita de código limpo, eficiente e fácil de manter.
+
+1 - [WeLoveDogs](https://welovedogs.onrender.com)
+
+2 - [PlantCard](https://plantcard.onrender.com)
+
+3 - [Calculator](https://three-calculator.onrender.com)
+
+4 - [Jogo da Forca](https://jogodaforca.onrender.com)
+
+5 - [Blog usando Prismic](https://blogprismic.onrender.com)
+
+6 - [Crud Membros](https://crudmembros.onrender.com)
+
