@@ -28,3 +28,6 @@ Também aprimorei minhas habilidades em escrita de código limpo, eficiente e f�
 
 6 - [Crud Membros](https://crudmembros.onrender.com)
 
+7 - [LaPadarie](https://lapadarie.onrender.com)
+
+8 - [Pokedex](https://pokedex-v134.onrender.com)
